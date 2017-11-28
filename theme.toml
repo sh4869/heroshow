@@ -1,0 +1,13 @@
+name = "Heroshow"
+license = "MIT"
+licenselink = "https://github.com/sh4869/heroshow/blob/master/LICENSE.md"
+description = "A simple and powerful theme for hugo"
+homepage = "https://github.com/sh4869/heroshow/"
+tags = ["blog"]
+features = []
+min_version = "0.31"
+
+[author]
+  name = "sh4869"
+  homepage = "http://sh4869.net"
+
