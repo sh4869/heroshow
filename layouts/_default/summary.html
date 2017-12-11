@@ -1,6 +1,7 @@
 <article class="single">
   <header>
     {{ .Render "article-info" }}
+    {{ .Render "buttons"}}
     <h1 class="title is-2">{{ .Title }}</h1>
   </header>
   <div class="content">
@@ -8,3 +9,5 @@
   </div>
   {{ template "_internal/disqus.html" . }}
 </article>
+
+<script src="//platform.twitter.com/widgets.js" defer></script>

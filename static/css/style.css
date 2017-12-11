@@ -102,3 +102,17 @@ ul.articles {
 ul.articles li {
     margin-bottom: 1.5em;
 }
+/** Buttons **/
+
+.buttons {
+    display: block;
+}
+
+.buttons > div{
+    display: inline;
+}
+
+.buttons > div:not(:last-child){
+    margin-right: 0.5em;
+    margin-bottom: 0;
+}
