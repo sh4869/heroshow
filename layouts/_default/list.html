@@ -16,11 +16,12 @@
     {{ end }}
 
     <ul class="articles">
-      {{ range .Data.Pages }}
-      <li>{{ .Render "li" }}</li>
-      {{ end }}
+      {{ $paginator := .Paginate (.Data.Pages) 10}}
+        {{ range $paginator.Pages }}
+        <li>{{ .Render "li" }}</li>
+        {{ end }}
     </ul>
-
+    {{ partial "pagination.html" . }}
   </div>
   <div class="column is-4">
     {{ partial "sidebar.html" . }}
