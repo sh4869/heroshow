@@ -58,7 +58,7 @@
               {{ .Site.Title }}
             </h1>
             {{ with .Site.Params.description }}
-              <h2 class="subtitle">
+            <h2 class="subtitle">
                 {{ . }}
               </h2>
             {{ end }}
@@ -67,9 +67,9 @@
       </section>
     {{ else }}
       <div class="container has-text-centered">
-        <h2 class="title">
-          {{ .Site.Title }}
-        </h2>
+        <a href="/">
+          <h2 class="title">{{ .Site.Title }}</h2>
+        </a>
       </div>
     {{ end }}
     

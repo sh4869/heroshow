@@ -76,14 +76,15 @@ article.single {
     margin-right: auto;
     margin-left: auto;
 }
+
 /** Article header **/
+
 article > header {
     margin-bottom: 1.5em;
-    border-bottom: 1px solid black;
 }
+
 article > header > .article-info {
-    margin-bottom: 1em;
-    margin-left: 0.3em;
+    margin-bottom: 0.3em;
 }
 article > header > .article-info li{
     display: inline;
@@ -97,6 +98,17 @@ article > header > .article-info li i{
 
 article > header > .buttons {
     clear: both;
+}
+
+/** Single Article Header **/
+
+article.single > header {
+    border-bottom: 1px solid black;
+}
+
+article.single > header > .article-info {
+    margin-left: 0.3em;
+    margin-bottom: 1em;
 }
 
 /** Article List **/
