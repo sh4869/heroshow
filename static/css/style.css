@@ -79,6 +79,7 @@ article.single {
 /** Article header **/
 article > header {
     margin-bottom: 1.5em;
+    border-bottom: 1px solid black;
 }
 article > header > .article-info {
     margin-bottom: 1em;
@@ -87,11 +88,15 @@ article > header > .article-info {
 article > header > .article-info li{
     display: inline;
     margin-right: 0.5rem;
-    font-size: 0.8rem;
+    font-size: 0.95rem;
 }
 
 article > header > .article-info li i{
     margin-right: 0.5em;
+}
+
+article > header > .buttons {
+    clear: both;
 }
 
 /** Article List **/
