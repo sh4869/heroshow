@@ -1,0 +1,30 @@
+{{ define "title" }}{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ end }}
+
+{{- define "main" -}}
+<div class="columns">
+  <div class="column is-8">
+
+    {{ if .IsHome }}
+
+    {{ else }}
+      <h1 class="title">
+        {{ if .Data.Singular }} 
+          {{ .Data.Singular | title }}: 
+        {{ end }}
+        {{ .Title }}
+      </h1>
+    {{ end }}
+
+    <ul class="articles">
+      {{ $paginator := .Paginate ((where .Site.RegularPages "Type" "post")) 10}}
+        {{ range $paginator.Pages }}
+        <li>{{ .Render "li" }}</li>
+        {{ end }}
+    </ul>
+    {{ partial "pagination.html" . }}
+  </div>
+  <div class="column is-4">
+    {{ partial "sidebar.html" . }}
+  </div>
+</div>
+{{- end -}}
