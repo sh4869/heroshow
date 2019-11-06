@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">    
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1"
+    />
     <title>{{ block "title" . }}{{ end }}{{ .Site.Title }}</title>
-    {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="RSS" href="{{  .RelPermalink }}">{{ end }}
-    <link rel="canonical" href="{{ .Permalink }}">
-    
+    {{ with .OutputFormats.Get "RSS" }}
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="{{  .RelPermalink }}"
+    />
+    {{ end }}
+    <link rel="canonical" href="{{ .Permalink }}" />
+
     {{ partial "css.html" . }}
     {{ partial "single_meta.html" . }}
     {{ partial "single_json_ld.html" . }}
@@ -16,86 +26,94 @@
     {{ if ne (getenv "HUGO_ENV") "DEV" }}
     {{ template "_internal/google_analytics.html" . }}
     {{ end }}
-    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a href="/" class="navbar-item">
-            Laboratory of Scalet
-          </a>
-          <div class="navbar-burger burger" data-target="navbarMenu">
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
+    <nav
+      class="navbar is-transparent"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a href="/" class="navbar-item">
+          Laboratory of Scalet
+        </a>
+        <div class="navbar-burger burger" data-target="navbarMenu">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-    
+      </div>
+
       {{ if ne (len .Site.Menus) 0 }}
-        <div id="navbarMenu" class="navbar-menu">
-          {{ range .Site.Menus }}
-          <div class="navbar-end">
-            {{ range . }}
-              {{ if .HasChildren }}
-              <!-- TODO -->
-              {{ else }}
-                <a class="navbar-item" href="{{ .URL }}">
-                  {{ .Name }}
-                </a>
-              {{ end }}
-            {{ end }}
-          </div>
+      <div id="navbarMenu" class="navbar-menu">
+        {{ range.Site.Menus }}
+        <div class="navbar-end">
+          {{ range . }}
+          {{ if .HasChildren }}
+          <!-- TODO -->
+          {{ else }}
+          <a class="navbar-item" href="{{ .URL }}">
+            {{ .Name }}
+          </a>
+          {{ end }}
           {{ end }}
         </div>
+        {{ end }}
+      </div>
       {{ end }}
     </nav>
 
-    
-
     {{ if .IsHome }}
-      <section class="hero">
-        <section class="hero-body">
-          <div class="container has-text-centered">
-            <h1 class="title is-1">
-              {{ .Site.Title }}
-            </h1>
-            {{ with .Site.Params.description }}
-            <h2 class="subtitle">
-                {{ . }}
-              </h2>
-            {{ end }}
-          </div>
-        </section>
+    <section class="hero">
+      <section class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title is-1">
+            {{ .Site.Title }}
+          </h1>
+          {{ with.Site.Params.description }}
+          <h2 class="subtitle">
+            {{ . }}
+          </h2>
+          {{ end }}
+        </div>
       </section>
+    </section>
     {{ else }}
-      <div class="container has-text-centered">
-        <a href="/">
-          <h2 class="title">{{ .Site.Title }}</h2>
-        </a>
-      </div>
+    <div class="container has-text-centered">
+      <a href="/">
+        <h2 class="title">{{ .Site.Title }}</h2>
+      </a>
+    </div>
     {{ end }}
-    
+
     <section class="section">
       <main>
-        <div class="container">
-          {{ block "main" . }}{{ end }}
-        </div>
+        <div class="container">{{ block "main" . }}{{ end }}</div>
       </main>
     </section>
     <footer class="footer">
       <div class="container">
-          <div class="content has-text-centered">
-          <p>{{ with .Site.Copyright }}{{ . | safeHTML }}{{ else }}<span class="h-logo">&copy; {{ .Site.Title }}</span>{{ end }}.
-            Powered by <a href="https://gohugo.io/">Hugo</a>.
+        <div class="content has-text-centered">
+          <p>
+            {{ with.Site.Copyright }}
+            {{ . | safeHTML }}{{ else }}
+            <span class="h-logo">&copy; {{ .Site.Title }}</span
+            >{{ end }}. Powered by <a href="https://gohugo.io/">Hugo</a>.
           </p>
         </div>
       </div>
     </footer>
 
-    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/styles/default.min.css"
+    />
+    <script async src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/highlight.min.js"></script>
+    <script>window.addEventListener("load", function() { hljs.initHighlighting() });</script>
     <script src="/js/navbar.js"></script>
-    
-    <script src="https://unpkg.com/tippy.js@2.0.2/dist/tippy.all.min.js" type="text/javascript"></script>
+
+    <script
+      src="https://unpkg.com/tippy.js@2.0.2/dist/tippy.all.min.js"
+      type="text/javascript"
+    ></script>
     <script type="text/javascript" src="/js/tips.js"></script>
   </body>
 </html>
-
