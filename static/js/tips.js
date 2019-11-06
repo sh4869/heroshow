@@ -1,4 +1,4 @@
-window.addEventListener("Load", function() {
+window.addEventListener("load", function() {
   var comments = document.querySelectorAll(".footnote-ref");
   var footnotes = document.querySelectorAll(".footnotes li");
   for (var i = 0; i < comments.length; i++) {
@@ -16,7 +16,6 @@ window.addEventListener("Load", function() {
       .querySelector("#fn\\:" + id)
       .innerText.replace("[return]", "");
     comments[i].title = text;
-
     tippy(comments[i], {
       arrow: "small",
       stickyDuration: 100,
