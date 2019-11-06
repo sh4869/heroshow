@@ -8,15 +8,6 @@
 {{ define "main" }}
 
 <div>
-  <nav class="breadcrumb" aria-label="breadcrumbs">
-    <ul>
-      <li><a href="{{ .Site.BaseURL }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-      {{ with .Section }}
-      <li><a href="{{ $.Site.BaseURL }}{{ . | urlize }}/" itemprop="url"><span itemprop="title">{{ . }}</span></a></li>
-      {{ end }}
-      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-    </ul>
-  </nav>
   {{ .Render "summary" }}
 </div>
 
