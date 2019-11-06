@@ -14,7 +14,7 @@
       {{ with .Section }}
       <li><a href="{{ $.Site.BaseURL }}{{ . | urlize }}/" itemprop="url"><span itemprop="title">{{ . }}</span></a></li>
       {{ end }}
-      <li><a href="{{ .URL }}">{{ .Title }}</a></li>
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
     </ul>
   </nav>
   {{ .Render "summary" }}
