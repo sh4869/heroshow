@@ -1,143 +1,144 @@
 /** All **/
 
 body {
-    font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
 }
 .site-title {
-    font-family: 'Righteous', cursive;
-    margin-bottom: 1rem;
+  font-family: "Righteous", cursive;
+  margin-bottom: 1rem;
 }
-section.section {
-    font-size: 1em;
+/** font awesome のiconを修正するやつ **/
+i.fa {
+  margin-right: 0.3em;
 }
 
 /* Formatted  */
 .term {
-    display: block;
-    text-align: right;
+  display: block;
+  text-align: right;
 }
 
 .term p {
-    display: inline;
+  display: inline;
 }
 
 .tag-cloud p {
-    display: inline-block;
-    margin-right: 0.5em;
+  display: inline-block;
+  margin-right: 0.5em;
 }
 
 .footerbar {
-    border-top: 1px solid rgba(145, 145, 145, 0.11);
-    margin-top: 1em;
-    margin-bottom: 1em;
-    padding-top: 0.5em;
+  border-top: 1px solid rgba(145, 145, 145, 0.11);
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-top: 0.5em;
 }
 
 .footerbar .subtitle {
-    margin-top: 0.5em;
-    padding-bottom: 0.3em;
-    margin-bottom: 0.5em;
-    border-bottom: 1px solid rgb(0, 25, 138);
+  margin-top: 0.5em;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid rgb(0, 25, 138);
 }
 
 .sidebar {
-    padding-bottom: 1em;
+  padding-bottom: 1em;
 }
 
-.sidebar>div {
-    margin-bottom: 0.5em;
+.sidebar > div {
+  margin-bottom: 0.5em;
 }
 
 .sidebar .subtitle {
-    margin-top: 0.5em;
-    padding-bottom: 0.3em;
-    margin-bottom: 0.5em;
-    border-bottom: 1px solid rgb(0, 25, 138);
+  margin-top: 0.5em;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid rgb(0, 25, 138);
 }
 
 .breadcrumb-area {
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #f7f7f7;
-    margin-bottom: 1em;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  margin-bottom: 1em;
 }
 
-.terms .panel-block span{
-    margin-right: 0;
-    margin-left: auto;
+.terms .panel-block span {
+  margin-right: 0;
+  margin-left: auto;
 }
 
 /** Article Content **/
 
 article {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 article.single {
-    max-width: 1200px;
-    margin-right: auto;
-    margin-left: auto;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /** Article header **/
 
 article > header {
-    margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 
-article > header > .article-info {
-    margin-bottom: 0.3em;
-}
-article > header > .article-info li{
-    display: inline;
-    margin-right: 0.5rem;
-    font-size: 0.95rem;
+.article-info {
+  margin-bottom: 0.3em;
 }
 
-article > header > .article-info li i{
-    margin-right: 0.5em;
+@media (min-width: 600px) {
+  .article-info {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .article-info ul {
+    margin-right: auto;
+  }
 }
 
-article > header > .buttons {
-    clear: both;
+.article-info ul li {
+  display: inline;
+  font-size: 0.95rem;
+  margin-right: 0.5rem;
+}
+
+article > header > .article-info li i {
+  margin-right: 0.5em;
+}
+
+.article-info-buttons > .article-info-button {
+  display: inline;
+  margin-left: 0.5em;
 }
 
 /** Single Article Header **/
 
 article.single > header {
-    border-bottom: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 article.single > header > .article-info {
-    margin-left: 0.3em;
-    margin-bottom: 1em;
+  margin-left: 0.3em;
+  margin-bottom: 1em;
 }
 
 article.single > .content {
-    max-width: 1000px;
-    margin: 0 auto 1em auto;
+  max-width: 1000px;
+  margin: 0 auto 1em auto;
 }
 
 /** Article List **/
 
 ul.articles {
-    list-style: none;
+  list-style: none;
 }
 ul.articles li {
-    margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 /** Buttons **/
-
-.buttons {
-    display: block;
-}
-
-.buttons > div{
-    display: inline;
-}
-
-.buttons > div:not(:last-child){
-    margin-right: 0.5em;
-    margin-bottom: 0;
-}

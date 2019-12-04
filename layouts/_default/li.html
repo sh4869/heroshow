@@ -1,6 +1,6 @@
 <article class="li">
     <header>
-        {{ .Render "article-info" }}
+        <div class="article-info">{{ .Render "article-info" }}</div>
         <h2 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     </header>
     <div class="summary">{{ .Summary }}</div>
@@ -8,4 +8,3 @@
         <a href="{{ .Permalink }}" title="{{ .Title }}">Read More…</a>
     </footer>
 </article>
-      

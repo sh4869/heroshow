@@ -1,7 +1,7 @@
 <div class="sidebar">
     <h1 class="subtitle">Latest Posts</h1>
     <div>
-        {{ range first 10 .Site.RegularPages }}
+        {{ range first 5 .Site.RegularPages }}
         <p>
             <i class="fa fa-book"></i>
             <a href="{{ .Permalink }}">
