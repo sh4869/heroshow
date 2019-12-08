@@ -14,6 +14,7 @@ i.fa {
 }
 
 /* Formatted  */
+
 .term {
   display: block;
   text-align: right;
@@ -142,3 +143,19 @@ ul.articles li {
   margin-bottom: 1.5em;
 }
 /** Buttons **/
+
+.content h1 {
+  font-size: 1.8em;
+}
+
+.content h2 {
+  font-size: 1.6em;
+}
+
+.content h3 {
+  font-size: 1.4em;
+}
+
+.content h4 {
+  font-size: 1em;
+}
