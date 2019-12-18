@@ -6,9 +6,8 @@
     <title>{{ block "title" . }}{{ end }}{{ .Site.Title }}</title>
     {{ with .OutputFormats.Get "RSS" }}
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ .RelPermalink }}" />
-    {{ end }}
+    {{ end }} {{ partial "favicon.html" .}}
     <link rel="canonical" href="{{ .Permalink }}" />
-
     {{ partial "css.html" . }} {{ partial "single_meta.html" . }} {{ partial "single_json_ld.html" . }}
   </head>
 
@@ -16,6 +15,9 @@
     {{ if ne (getenv "HUGO_ENV") "DEV" }} {{ template "_internal/google_analytics.html" . }} {{ end }}
     <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
+        <a href="/" class="navbar-item">
+          {{ .Site.Title }}
+        </a>
         <div class="navbar-burger burger" data-target="navbarMenu">
           <span></span>
           <span></span>
@@ -41,12 +43,23 @@
     <section class="hero header">
       <section class="hero-body">
         <div class="container has-text-centered">
-          <a href="/">
-            <h1 class="title is-1 site-title">{{ .Site.Title }}</h1>
-          </a>
-          {{ with.Site.Params.description }}
-          <p>{{ . }}</p>
-          {{ end }}
+          <div class="columns is-centered">
+            <div class="column is-half">
+              <div class="columns is-gapless">
+                {{ with.Site.Params.icon }}
+                <div class="column is-one-fifth">
+                  <img src="{{ . }}" />
+                </div>
+                {{ end }}
+                <div class="column">
+                  <h1 class="title is-1 site-title">{{ .Site.Title }}</h1>
+                  {{ with.Site.Params.description }}
+                  <p class="site-description">{{ . }}</p>
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </section>
@@ -69,7 +82,6 @@
     </footer>
     {{ if .IsPage }}
     <script src="/js/navbar.js"></script>
-
     <script async src="https://unpkg.com/tippy.js@2.0.2/dist/tippy.all.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="/js/tips.js"></script>
     {{ end }}
