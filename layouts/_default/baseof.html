@@ -15,9 +15,6 @@
     {{ if ne (getenv "HUGO_ENV") "DEV" }} {{ template "_internal/google_analytics.html" . }} {{ end }}
     <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a href="/" class="navbar-item">
-          {{ .Site.Title }}
-        </a>
         <div class="navbar-burger burger" data-target="navbarMenu">
           <span></span>
           <span></span>
@@ -46,13 +43,8 @@
           <div class="columns is-centered">
             <div class="column is-half">
               <div class="columns is-gapless">
-                {{ with.Site.Params.icon }}
-                <div class="column is-one-fifth">
-                  <img src="{{ . }}" />
-                </div>
-                {{ end }}
                 <div class="column">
-                  <h1 class="title is-1 site-title">{{ .Site.Title }}</h1>
+                  <h1 class="title is-1 site-title"><a href="/">{{ .Site.Title }}</a></h1>                
                   {{ with.Site.Params.description }}
                   <p class="site-description">{{ . }}</p>
                   {{ end }}
