@@ -1,7 +1,7 @@
 <div class="footerbar">
     <div class="columns is-centered">
         <div class="column">
-            <h1 class="subtitle">Latest Posts</h1>
+            <h3 class="subtitle">Latest Posts</h3>
             <div>
                 {{ range first 5 .Site.RegularPages }}
                 <p>
@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="column">
-            <h1 class="subtitle">Category</h1>
+            <h3 class="subtitle">Category</h3>
             <div>
                 {{ range $name, $value := .Site.Taxonomies.categories }}
                 <p>
@@ -28,7 +28,7 @@
         </div>
 
         <div class="column">
-            <h1 class="subtitle">Tag</h1>
+            <h3 class="subtitle">Tag</h3>
             <div class="tag-cloud">
                 {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
                 <p>

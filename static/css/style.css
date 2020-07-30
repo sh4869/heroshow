@@ -10,22 +10,6 @@ i.fa {
   margin-right: 0.3em;
 }
 
-/* Formatted  */
-
-.term {
-  display: block;
-  text-align: right;
-}
-
-.term p {
-  display: inline;
-}
-
-.tag-cloud p {
-  display: inline-block;
-  margin-right: 0.5em;
-}
-
 /** site header **/
 
 h1.site-title.title.is-1 {
@@ -34,7 +18,7 @@ h1.site-title.title.is-1 {
   font-size: 2rem;
 }
 
-h1.site-title.title.is-1 a{
+h1.site-title.title.is-1 a {
   color: black;
 }
 
@@ -50,6 +34,10 @@ h2.title {
   font-size: 1.6rem;
 }
 
+h2.title a {
+  color: #5d5d5d;
+}
+
 .footerbar {
   border-top: 1px solid rgba(145, 145, 145, 0.11);
   margin-top: 1em;
@@ -61,7 +49,14 @@ h2.title {
   margin-top: 0.5em;
   padding-bottom: 0.3em;
   margin-bottom: 0.5em;
+  font-size: 1.2em;
+  font-weight: 600;
   border-bottom: 1px solid rgb(0, 25, 138);
+}
+
+.tag-cloud p {
+  display: inline-block;
+  margin-right: 0.5em;
 }
 
 .sidebar {
@@ -82,7 +77,7 @@ h2.title {
 .breadcrumb-area {
   padding: 5px;
   border-radius: 5px;
-  background-color: #f7f7f7;
+  background-color: #f6fffc;
   margin-bottom: 1em;
 }
 
@@ -96,12 +91,6 @@ h2.title {
 article {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-}
-
-article.single {
-  max-width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 /** Article header **/
@@ -126,8 +115,8 @@ article > header {
 
 @media screen and (min-width: 1100px) {
   .container {
-      max-width: 1000px;
-      width: 1000px;
+    max-width: 1000px;
+    width: 1000px;
   }
 }
 
@@ -149,16 +138,21 @@ article > header > .article-info li i {
 /** Single Article Header **/
 
 article.single > header {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid lightgray;
 }
 
 article.single > header > .article-info {
   margin-left: 0.3em;
-  margin-bottom: 1em;
+}
+
+article.single > header > .title {
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  font-size: 1.5em;
 }
 
 article.single > .content {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto 1em auto;
 }
 
@@ -170,6 +164,7 @@ ul.articles {
 ul.articles li {
   margin-bottom: 1.5em;
 }
+
 /** Buttons **/
 
 .content h1 {
@@ -197,4 +192,3 @@ div.summary {
   font-size: 0.9rem;
   margin-left: 1em;
 }
-
