@@ -3,6 +3,7 @@
 body {
   font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
     "Open Sans", "Helvetica Neue", sans-serif;
+  color: #0c0c0c;
 }
 
 /** font awesome のiconを修正するやつ **/
@@ -31,11 +32,11 @@ h1.site-title.title.is-1 a {
 }
 
 h2.title {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 
 h2.title a {
-  color: #5d5d5d;
+  color: #2d2d2d;
 }
 
 .footerbar {
@@ -95,12 +96,12 @@ article {
 
 /** Article header **/
 
-article > header {
-  margin-bottom: 1.5em;
+article > .article-header {
+  margin-bottom: 1em;
 }
 
 .article-info {
-  margin-bottom: 0.3em;
+  margin-bottom: 0.5em;
 }
 
 @media (min-width: 600px) {
@@ -147,7 +148,6 @@ article.single > header > .article-info {
 
 article.single > header > .title {
   margin-bottom: 0.8rem;
-  font-weight: 500;
   font-size: 1.5em;
 }
 

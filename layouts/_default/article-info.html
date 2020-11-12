@@ -5,12 +5,6 @@
       >{{ .Lastmod.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}</time
     >
   </li>
-  {{ with .Section }}
-  <li>
-    <i class="fa fa-bookmark" aria-hidden="true"></i>
-    <a href="{{ $.Site.BaseURL }}{{ . | urlize }}/">{{ . }}</a>
-  </li>
-  {{ end }}
   <span></span>
   {{ if .Params.Categories }}
   <li>
