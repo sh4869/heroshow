@@ -1,10 +1,4 @@
 <article class="li">
-    <div class="article-header">
-        <div class="article-info">{{ .Render "article-info" }}</div>
-        <h2 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    </div>
+    {{ partial "article-header.html" . }}
     <div class="summary">{{ .Summary }}<a href="{{ .Permalink }}" title="{{ .Title }}"></a>…</div>
-    <footer>
-        
-    </footer>
 </article>
