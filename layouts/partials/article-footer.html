@@ -1,0 +1,12 @@
+<div class="article-footer">
+    {{ template "_internal/disqus.html" . }}
+    {{ partial "buttons.html" . }}
+    <div class="article-git-info">
+        {{ if .GitInfo }}
+            <ul>
+                <li>最終更新日: {{ .Page.Lastmod.Format "2006/01/02" }}</li>
+                <li>コミット: <a href="{{$.Page.Site.Params.repo}}/commit/{{.GitInfo.Hash}}">{{.GitInfo.Subject}}</a></li>
+            </ul>
+        {{ end }}
+    </div>
+</div>

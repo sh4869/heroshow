@@ -60,21 +60,6 @@ h2.title a {
   margin-right: 0.5em;
 }
 
-.sidebar {
-  padding-bottom: 1em;
-}
-
-.sidebar > div {
-  margin-bottom: 0.5em;
-}
-
-.sidebar .subtitle {
-  margin-top: 0.5em;
-  padding-bottom: 0.3em;
-  margin-bottom: 0.5em;
-  border-bottom: 1px solid rgb(0, 25, 138);
-}
-
 .breadcrumb-area {
   padding: 5px;
   border-radius: 5px;
@@ -129,6 +114,11 @@ article > .article-header {
 
 article > header > .article-info li i {
   margin-right: 0.5em;
+}
+
+.article-info-buttons {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .article-info-buttons > .article-info-button {
@@ -191,4 +181,11 @@ pre {
 div.summary {
   font-size: 0.9rem;
   margin-left: 1em;
+}
+
+.article-git-info {
+  font-size: smaller;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
 }

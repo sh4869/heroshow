@@ -14,7 +14,7 @@
 {{ end }}
 
 <ul class="articles">
-  {{ $paginator := .Paginate ((where .Site.RegularPages "Type" "post")) 5}}
+  {{ $paginator := .Paginate ((where .Site.RegularPages "Type" "post")) 7}}
     {{ range $paginator.Pages }}
     <li>{{ .Render "li" }}</li>
     {{ end }}

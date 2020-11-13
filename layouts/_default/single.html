@@ -14,9 +14,8 @@
     <div class="content">
       <div class="article-body">{{ .Content }}</div>
     </div>
-    {{ template "_internal/disqus.html" . }}
-    {{ .Render "buttons" }}
-  </article>  
+    {{ partial "article-footer.html" . }}
+  </article>
 </div>
 
 {{ partial "footerbar.html" . }}

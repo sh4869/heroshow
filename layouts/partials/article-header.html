@@ -1,4 +1,35 @@
 <div class="article-header">
-    <div class="article-info">{{ partial "article-info.html" . }}</div>
+    <div class="article-info">
+        <ul>
+            <li>
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='{{ .Date.Format "2006-01-02T15:04:05JST" }}'
+                >{{ .Date.Format ( .Site.Params.dateformat | default "2006/01/02") }}</time
+              >
+            </li>
+            <span></span>
+            {{ if .Params.Categories }}
+            <li>
+              <i class="fa fa-folder" aria-hidden="true"></i>
+              {{ range (.Params.Categories) }}
+              <a href='{{ $.Site.BaseURL }}{{ "categories" | urlize }}/{{ . | urlize }}/'>{{ . }}</a>
+              {{ end }}
+            </li>
+            {{ end }}
+            <span></span>
+            {{ if .Params.Tags }}
+            <li>
+              <i class="fa fa-tags" aria-hidden="true"></i>
+              {{ range (.Params.Tags) }}
+              <a href='{{ $.Site.BaseURL }}{{ " tags " | urlize }}/{{ . | urlize }}/'>{{ . }}</a>
+              {{ end }}
+            </li>
+            {{ end }}
+            <span></span>
+            {{ if .Draft }}
+                <li style="color: #ff0000;">DRAFT</li>
+            {{ end }}
+        </ul>          
+    </div>
     <h2 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 </div>
