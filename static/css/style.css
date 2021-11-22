@@ -31,13 +31,16 @@ h1.site-title.title.is-1 a {
   padding: 0;
 }
 
+
 h2.title {
   font-size: 1.3rem;
+  margin-left: 1em;
 }
 
 h2.title a {
   color: #2d2d2d;
 }
+
 
 .footerbar {
   border-top: 1px solid rgba(145, 145, 145, 0.11);
